@@ -11,6 +11,89 @@
 
 <body>
 
+    <header class="logo-container">
+        <img src="./coffee_masters_logo.png" alt="Logo" class="logo-img">
+        <p class="logo-text">Coffee Masters</p>
+    </header>
+
+    <div class="cart-container">
+
+        <div class="container item-container">
+
+            <div class="item-heading-container">
+                <h3 class="item-heading">ITEMS</h3>
+            </div>
+
+            <div class="item item-1">
+                <p class="item-quantity">1x</p>
+                <p class="item-name">Cappuccino</p>
+                <p class="item-variant">Lite Foam</p>
+                <p class="item-price">$3.35</p>
+                <hr class="item-hr">
+            </div>
+
+            <div class="item item-2">
+                <p class="item-quantity">1x</p>
+                <p class="item-name">Cappuccino</p>
+                <p class="item-variant">Lite Milk <br> Double espresso</p>
+                <p class="item-price">$3.85</p>
+                <hr class="item-hr">
+            </div>
+
+            <div class="item item-3">
+                <p class="item-quantity">1x</p>
+                <p class="item-name">Croissant</p>
+                <p class="item-variant">Butter</p>
+                <p class="item-price">$2.45</p>
+            </div>
+
+        </div>
+
+        <div class="container order-name-container">
+
+            <div class="order-name-heading-container">
+                <h3 class="order-name-heading">NAME</h3>
+            </div>
+
+            <div class="order-name-input-container">
+                <label for="order-name" class="input-label">Name for Order</label>
+                <input id="order-name" class="overlay-text-input" placeholder="Order Name..." />
+            </div>
+        </div>
+
+        <div class="container payment-container">
+
+            <div class="payment-heading-container">
+                <h3 class="payment-heading">NAME</h3>
+            </div>
+
+            <div class="card-number-heading-container">
+                <label for="card-number" class="input-label">Card Number</label>
+                <input id="card-number" class="overlay-text-input" placeholder="123 456 789..." />
+            </div>
+
+            <div class="ccv-number-heading-container">
+                <label for="ccv-number" class="input-label">CCV Number</label>
+                <input id="ccv-number" class="overlay-text-input" placeholder="123..." />
+            </div>
+
+        </div>
+
+        <div class="container cart-total-container">
+            <p class="subtotal"><small class="title">Subtotal:</small><small class="total">$9.65</small></p>
+            <hr>
+            <p class="tax"><small class="title">Tax:</small><small class="total">$0.82</small></p>
+            <hr>
+            <p class="totalAmount"><small class="title">Total:</small><small class="total">$10.47</small></p>
+            <hr>
+        </div>
+
+        <div class="button-container">
+            <button class="checkout">Place Order</button>
+        </div>
+
+    </div>
+
 </body>
 
 </html>
