@@ -9,6 +9,7 @@ body {
     font-size: 16px;
     min-height: 100vh;
     padding: 0;
+    background-color: #efefef;
 }
 
 /* Variables */
@@ -42,22 +43,26 @@ body {
 .container {
     background: var(--accent-light);
     border-radius: 25px;
-    margin: 30px;
+    margin: 20px;
     padding: 10px 30px 50px 50px;
     height: fit-content;
+
+
 }
 
 .item-container {
     grid-area: item;
+    box-shadow: 0 8px 8px -4px var(--accent-dark);
 }
 
 .order-name-container {
     grid-area: order-name;
-    margin-bottom: 0;
+    box-shadow: 0 8px 8px -4px var(--accent-dark);
 }
 
 .payment-container {
     grid-area: payment;
+    box-shadow: 0 8px 8px -4px var(--accent-dark);
 }
 
 .cart-total-container {
@@ -233,7 +238,7 @@ h3 {
 }
 
 .checkout {
-    width: 80%;
+    width: 90%;
     display: block;
     margin: 0 auto;
     padding: 20px;
