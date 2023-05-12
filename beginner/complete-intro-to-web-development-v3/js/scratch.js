@@ -19,6 +19,7 @@ result.push(`Changing a let variable = ` + mango);
 mango = 'sour';
 result.push(`Changing a let variable = ` + mango);
 
+// Output results by iterating the result array
 result.forEach((item) => {
 	restultsContainer.appendChild(outputResults(item));
 });
