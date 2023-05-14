@@ -6,6 +6,15 @@ const restultsContainerOne = document.getElementById('resultsOne');
 const resultTwo = [];
 const restultsContainerTwo = document.getElementById('resultsTwo');
 
+// Output to frontend - Control Flow
+const resultThree = [];
+const restultsContainerThree = document.getElementById('resultsThree');
+
+// Output to frontend - Loops
+const resultFour = [];
+const restultsContainerFour = document.getElementById('resultsFour');
+
+// Function that outputs to frontend
 function outputResults(item) {
 	let resultItem = document.createElement('li');
 	resultItem.textContent = item;
@@ -52,4 +61,39 @@ resultTwo.push(`Number float = ` + numberTwo);
 
 resultTwo.forEach((item) => {
 	restultsContainerTwo.appendChild(outputResults(item));
+});
+
+// Control Flow
+let skyColor = 'Blue';
+if (skyColor === 'Blue') {
+	resultThree.push('Sky is blue');
+} else {
+	resultThree.push('Sky is not blue');
+}
+
+resultThree.forEach((item) => {
+	restultsContainerThree.appendChild(outputResults(item));
+});
+
+// Loops
+let friendsAtYourParty = 0;
+friendsAtYourParty = friendsAtYourParty + 1;
+while (friendsAtYourParty < 10) {
+	friendsAtYourParty = friendsAtYourParty + 1;
+}
+resultFour.push(friendsAtYourParty);
+
+for (let i = 0; i <= 3; i++) {
+	resultFour.push(i);
+}
+
+let fruit = ['Mango', 'Orange', 'Apple', 'Peach'];
+let fruitText = '';
+for (let i = 0; i < fruit.length; i++) {
+	fruitText = fruit[i];
+	resultFour.push(fruitText);
+}
+
+resultFour.forEach((item) => {
+	restultsContainerFour.appendChild(outputResults(item));
 });
