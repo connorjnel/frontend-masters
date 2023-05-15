@@ -14,6 +14,10 @@ const restultsContainerThree = document.getElementById('resultsThree');
 const resultFour = [];
 const restultsContainerFour = document.getElementById('resultsFour');
 
+// Output to frontend - Loops Exercise
+const resultFive = [];
+const restultsContainerFive = document.getElementById('resultsFive');
+
 // Function that outputs to frontend
 function outputResults(item) {
 	let resultItem = document.createElement('li');
@@ -96,4 +100,10 @@ for (let i = 0; i < fruit.length; i++) {
 
 resultFour.forEach((item) => {
 	restultsContainerFour.appendChild(outputResults(item));
+});
+
+// Loops Exercise
+
+resultFive.forEach((item) => {
+	restultsContainerFive.appendChild(outputResults(item));
 });
