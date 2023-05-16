@@ -18,6 +18,10 @@ const restultsContainerFour = document.getElementById('resultsFour');
 const resultFive = [];
 const restultsContainerFive = document.getElementById('resultsFive');
 
+// Output to frontend - Functions
+const resultSix = [];
+const restultsContainerSix = document.getElementById('resultsSix');
+
 // Function that outputs to frontend
 function outputResults(item) {
 	let resultItem = document.createElement('li');
@@ -105,15 +109,56 @@ resultFour.forEach((item) => {
 // Loops Exercise
 
 const timesToRepeat = 10;
-const character = '🐶';
-let awnser = '';
+const character = '🐶🐇';
+let answer = '';
 
 for (let i = 0; i < timesToRepeat; i++) {
-	awnser = `${awnser + character}`;
+	answer = `${answer + character}`;
 }
 
-resultFive.push(awnser);
+resultFive.push(answer);
 
 resultFive.forEach((item) => {
 	restultsContainerFive.appendChild(outputResults(item));
 });
+
+// Functions
+
+function greet(firstName, lastName, honorific, greeting) {
+	return `${greeting} ${honorific} ${lastName}! I’m extremely pleased you could join us, ${firstName}! I hope you enjoy your stay, ${honorific} ${lastName}.`;
+}
+
+resultSix.push(greet('Brian', 'Holt', 'Lord', 'Salutations'));
+resultSix.push(greet('Jack', 'Sparrow', 'Captain', 'A-hoy'));
+
+// Ways to write functions
+function bark() {
+	resultSix.push('woof');
+}
+
+const meow = function () {
+	resultSix.push('meeeeeeeow');
+};
+
+// the => is just = > put together, the font just combines them to one glyph
+const chirp = () => {
+	resultSix.push('chirp chirp');
+};
+
+bark();
+meow();
+chirp();
+
+resultSix.forEach((item) => {
+	restultsContainerSix.appendChild(outputResults(item));
+});
+
+// Scope
+
+function addFive(number) {
+	const someVariable = "you can't see me outside this function";
+	return number + 5;
+}
+
+addFive(10);
+console.log(someVariable);
