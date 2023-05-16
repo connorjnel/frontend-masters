@@ -104,6 +104,16 @@ resultFour.forEach((item) => {
 
 // Loops Exercise
 
+const timesToRepeat = 10;
+const character = '🐶';
+let awnser = '';
+
+for (let i = 0; i < timesToRepeat; i++) {
+	awnser = `${awnser + character}`;
+}
+
+resultFive.push(awnser);
+
 resultFive.forEach((item) => {
 	restultsContainerFive.appendChild(outputResults(item));
 });

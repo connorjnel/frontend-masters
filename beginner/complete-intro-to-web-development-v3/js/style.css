@@ -4,7 +4,6 @@ body {
 	box-sizing: border-box;
 	margin: 2%;
 	font-family: 'Open Sans', sans-serif;
-	overflow: hidden;
 	color: #333;
 	font-size: 16px;
 	min-height: 100vh;
@@ -45,5 +44,5 @@ ul {
 }
 
 ul li::before {
-	content: '👽 \2192  ';
+	content: '➡️ ';
 }
