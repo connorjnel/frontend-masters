@@ -162,3 +162,5 @@ function addFive(number) {
 
 addFive(10);
 console.log(someVariable);
+
+// Builtins
