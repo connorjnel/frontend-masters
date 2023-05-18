@@ -161,6 +161,19 @@ function addFive(number) {
 }
 
 addFive(10);
-console.log(someVariable);
+// console.log(someVariable);
 
 // Builtins
+
+const sentence = 'ThIs HaS wEiRd CaSiNg On It';
+const lowerCaseSentence = sentence.toLowerCase();
+console.log(lowerCaseSentence);
+
+let string = 'Hi my name is Jovan';
+string = string.substring(3, 14);
+console.log(string);
+
+console.log(((Math.floor(Math.random() * 500) * Math.random()) / 3) * 10 - Math.PI);
+
+const bday = new Date('August 19, 1975 23:15:30');
+console.log(bday);
