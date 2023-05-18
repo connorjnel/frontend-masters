@@ -177,3 +177,17 @@ console.log(((Math.floor(Math.random() * 500) * Math.random()) / 3) * 10 - Math.
 
 const bday = new Date('August 19, 1975 23:15:30');
 console.log(bday);
+
+// Objects
+
+const person = {
+	name: 'Brian Holt',
+	city: 'Seattle',
+	state: 'WA',
+	favoriteFood: '🌮',
+	wantsTacosRightNow: true,
+	numberOfTacosWanted: 100,
+};
+console.log(person);
+console.log(person.name);
+console.log(person['name']); // same as the line above; prefer using the other one
