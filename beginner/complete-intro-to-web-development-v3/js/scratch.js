@@ -191,3 +191,6 @@ const person = {
 console.log(person);
 console.log(person.name);
 console.log(person['name']); // same as the line above; prefer using the other one
+
+
+// Context
