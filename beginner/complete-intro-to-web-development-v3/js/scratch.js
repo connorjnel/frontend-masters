@@ -273,3 +273,5 @@ for (let i = 0; i < cities.length; i++) {
 cities.forEach(function (city) {
 	console.log(city);
 });
+
+// DOM - Events & Listeners
