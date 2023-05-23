@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(49deg, rgba(255, 255, 255, 1) 65%, rgba(0, 99, 178, 1) 100%);
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-size: 2rem;
+}
+
+p {
+	margin: 0;
+	font-weight: 500;
+	color: #333;
+	padding: 40px;
+	text-align: center;
+	border: 2px solid #333;
+}
+
+.calc-button {
+	margin: 0;
+	font-weight: 500;
+	color: #333;
+	padding: 40px;
+	text-align: center;
+	border: 2px solid #333;
+	font-size: 2rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+.calc-button:hover:not(.display) {
+	background: dodgerblue;
+	color: #fff;
+	transition: all 0.4s ease;
+}
+
+.display {
+	grid-area: display;
+	background-color: #333;
+	color: #fff;
+	text-align: right;
+}
+
+.cancel {
+	grid-area: cancel;
+}
+
+.backspace {
+	grid-area: backspace;
+}
+
+.divide {
+	grid-area: divide;
+}
+
+.zero {
+	grid-area: zero;
+}
+
+.equals {
+	grid-area: equals;
+}
+
+.divide,
+.multiply,
+.minus,
+.plus,
+.equals {
+	background: darkorange;
+	color: #fff;
+}
+
+.calculator-container {
+	display: grid;
+	width: 500px;
+	border: 2px solid #333;
+	grid-template-areas:
+		'display display display display'
+		'cancel cancel backspace divide'
+		'. . . .'
+		'. . . .'
+		'. . . .'
+		'zero zero zero equals';
+}
