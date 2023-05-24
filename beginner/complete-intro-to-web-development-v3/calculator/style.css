@@ -1,90 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-body {
+* {
 	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100vw;
-	height: 100vh;
-	background: linear-gradient(49deg, rgba(255, 255, 255, 1) 65%, rgba(0, 99, 178, 1) 100%);
-	margin: 0;
-	padding: 0;
-	font-family: 'Roboto', sans-serif;
-	font-size: 2rem;
 }
 
-p {
+body {
+	padding: 0;
 	margin: 0;
-	font-weight: 500;
-	color: #333;
-	padding: 40px;
-	text-align: center;
-	border: 2px solid #333;
+}
+
+.calc {
+	width: 400px;
+	background-color: black;
+	color: white;
+}
+
+.screen {
+	color: white;
+	font-size: 40px;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: right;
+	padding: 20px 5px;
 }
 
 .calc-button {
-	margin: 0;
-	font-weight: 500;
-	color: #333;
-	padding: 40px;
-	text-align: center;
-	border: 2px solid #333;
-	font-size: 2rem;
-	font-family: 'Roboto', sans-serif;
+	background-color: #d8d9db;
+	color: black;
+	height: 100px;
+	width: 24.5%;
+	border: none;
+	border-radius: 0;
+	font-size: 40px;
+	cursor: pointer;
 }
 
-.calc-button:hover:not(.display) {
-	background: dodgerblue;
-	color: #fff;
-	transition: all 0.4s ease;
+.calc-button:hover {
+	background-color: #ebebeb;
 }
 
-.display {
-	grid-area: display;
-	background-color: #333;
-	color: #fff;
-	text-align: right;
+.calc-button:active {
+	background-color: #bbbcbe;
 }
 
-.cancel {
-	grid-area: cancel;
+.double {
+	width: 49.7%;
 }
 
-.backspace {
-	grid-area: backspace;
+.triple {
+	width: 74.8%;
 }
 
-.divide {
-	grid-area: divide;
+.calc-button:last-child {
+	background-color: #df974c;
+	color: white;
 }
 
-.zero {
-	grid-area: zero;
+.calc-button:last-child:hover {
+	background-color: #dfb07e;
 }
 
-.equals {
-	grid-area: equals;
+.calc-button:last-child:active {
+	background-color: #dd8d37;
 }
 
-.divide,
-.multiply,
-.minus,
-.plus,
-.equals {
-	background: darkorange;
-	color: #fff;
+.calc-button-row {
+	display: flex;
+	align-content: stretch;
+	justify-content: space-between;
+	margin-bottom: 0.5%;
 }
 
-.calculator-container {
-	display: grid;
-	width: 500px;
-	border: 2px solid #333;
-	grid-template-areas:
-		'display display display display'
-		'cancel cancel backspace divide'
-		'. . . .'
-		'. . . .'
-		'. . . .'
-		'zero zero zero equals';
+.calc-button-row:last-child {
+	padding-bottom: 0;
 }
