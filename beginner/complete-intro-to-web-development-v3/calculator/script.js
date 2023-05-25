@@ -1,3 +1,4 @@
+// Course solution used, I spent a hour just on the JS with no luck, was overcomplicating it.  My HTML/CSS was perfect though, replaced with course solution for so that JS would work out of box
 let runningTotal = 0;
 let buffer = '0';
 let previousOperator;
