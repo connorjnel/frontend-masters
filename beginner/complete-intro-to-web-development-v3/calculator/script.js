@@ -6,11 +6,13 @@ let previousOperator;
 const screen = document.querySelector('.screen');
 
 function buttonClick(value) {
+	// Succinct way to check if a variable is a number
 	if (isNaN(parseInt(value))) {
 		handleSymbol(value);
 	} else {
 		handleNumber(value);
 	}
+	// Rerender function updates the calculator display
 	rerender();
 }
 
@@ -69,11 +71,8 @@ function handleSymbol(value) {
 			runningTotal = 0;
 			break;
 		case '←':
-			if (buffer.length === 1) {
-				buffer = '0';
-			} else {
-				buffer = buffer.substring(0, buffer.length - 1);
-			}
+			// Ternary way of doing it, not my preference but was curious if I could remember syntax
+			buffer.length === 1 ? (buffer = '0') : (buffer = buffer.substring(0, buffer.length - 1));
 			break;
 		case '+':
 		case '-':
@@ -88,6 +87,7 @@ function rerender() {
 	screen.innerText = buffer;
 }
 
+// Better way to init all functions, in this case just init for event listener
 function init() {
 	document.querySelector('.calc-buttons').addEventListener('click', function (event) {
 		buttonClick(event.target.innerText);
