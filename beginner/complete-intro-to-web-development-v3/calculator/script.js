@@ -92,6 +92,28 @@ function init() {
 	document.querySelector('.calc-buttons').addEventListener('click', function (event) {
 		buttonClick(event.target.innerText);
 	});
+	// Added event listener for keyboard inputs like normal calculator, bit of code but works
+	window.addEventListener('keydown', function (event) {
+		let keyPressed = event.key;
+		if (keyPressed === 'Enter') {
+			keyPressed = '=';
+			buttonClick(keyPressed);
+		} else if (keyPressed === 'Backspace') {
+			keyPressed = '←';
+			buttonClick(keyPressed);
+		} else if (keyPressed === 'Escape') {
+			keyPressed = 'C';
+			buttonClick(keyPressed);
+		} else if (keyPressed === '*') {
+			keyPressed = '×';
+			buttonClick(keyPressed);
+		} else if (keyPressed === '/') {
+			keyPressed = '÷';
+			buttonClick(keyPressed);
+		} else {
+			buttonClick(keyPressed);
+		}
+	});
 }
 
 init();
