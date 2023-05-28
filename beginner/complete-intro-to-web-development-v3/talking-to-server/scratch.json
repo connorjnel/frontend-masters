@@ -1,0 +1,10 @@
+{
+	"name": "Luna",
+	"age": 10,
+	"breed": "Havanese",
+	"location": {
+		"city": "Seattle",
+		"state": "WA"
+	},
+	"cute": true
+}
