@@ -50,6 +50,8 @@ function addNewDoggo() {
 
 document.getElementById("dog-btn").addEventListener("click", addNewDoggo);
 
+// Custom written with async setting background image to random dog from api
+
 async function addDoggo() {
 	let url = "https://dog.ceo/api/breeds/image/random";
 	try {
