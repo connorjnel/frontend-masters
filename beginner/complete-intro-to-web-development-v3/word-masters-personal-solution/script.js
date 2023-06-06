@@ -7,6 +7,7 @@ let answerWord = getWord(wordOfTheDayURL);
 let guessWord = "";
 let count = 0;
 let gameResult;
+let counter = 0;
 
 async function getWord(wordOfTheDayURL) {
 	let request = await fetch(wordOfTheDayURL);
@@ -43,7 +44,6 @@ async function checkResult(guessWord) {
 	const content = await validation.json();
 	let validationCheck = content.validWord;
 	paintResult(validationCheck);
-	clearWord();
 }
 
 function paintResult(validationCheck) {
@@ -60,7 +60,6 @@ function paintResult(validationCheck) {
 }
 
 function compareLetters(guessWord, answerWord) {
-	let counter = 0;
 	for (let index = counter; index < count; index++) {
 		let charOne = guessWord[index];
 		let charTwo = answerWord[index];
