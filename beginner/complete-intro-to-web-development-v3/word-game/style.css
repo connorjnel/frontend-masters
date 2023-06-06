@@ -43,3 +43,18 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+.red {
+	background: #ff595e;
+	color: #fff;
+}
+
+.green {
+	background: #8ac926;
+	color: #fff;
+}
+
+.yellow {
+	background: #ffca3a;
+	color: #fff;
+}
