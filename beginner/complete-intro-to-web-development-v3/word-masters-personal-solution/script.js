@@ -19,11 +19,9 @@ function isLetter(letter) {
 }
 
 function populateBoxes(validLetter) {
-	if (count <= 4) {
-		boxes[count].innerText = validLetter;
-		guessWord = guessWord + validLetter;
-		count++;
-	}
+	boxes[count].innerText = validLetter;
+	guessWord = guessWord + validLetter;
+	count++;
 }
 
 function depopulateBoxes() {
@@ -45,10 +43,25 @@ async function checkResult(guessWord) {
 	const content = await validation.json();
 	let validationCheck = content.validWord;
 	paintResult(validationCheck);
+	clearWord();
+}
+
+function paintResult(validationCheck) {
+	// Activate animation while waiting for result
+	// Check guess word against valid word - compare?
+	if (guessWord === answerWord) {
+		alert("Winner Winner Chicken Dinner");
+	}
+	// Check guess letter against valid word - iterate over word or other string method
+	compareLetters(guessWord, answerWord);
+	// Paint boxes with corresponding color using css classes - add animation
+	// If guess is correct play victory animation
+	// if guess word is not correct move to next row of boxes - update count to start at 5 and call populateboxes
 }
 
 function compareLetters(guessWord, answerWord) {
-	for (let index = 0; index < guessWord.length; index++) {
+	let counter = 0;
+	for (let index = counter; index < count; index++) {
 		let charOne = guessWord[index];
 		let charTwo = answerWord[index];
 
@@ -60,29 +73,29 @@ function compareLetters(guessWord, answerWord) {
 			boxes[index].classList.add("red");
 		}
 	}
+	counter = count - 5;
+	clearWord();
 }
 
-function paintResult(validationCheck) {
-	// Activate animation while waiting for result
-	// Check guess word against valid word - compare?
-	if (validationCheck === true) {
-		gameResult = true;
-		boxes.forEach((box) => {
-			if (box.innerText) {
-				box.classList.add("green");
-			}
-		});
+function clearBoxStyle() {
+	boxes.forEach((box) => {
+		box.className = "scoreboard-letter";
+	});
+}
+
+function checkLength() {
+	if (guessWord.length == 4) {
+		checkResult(guessWord);
 	}
-	// Check guess letter against valid word - iterate over word or other string method
-	compareLetters(guessWord, answerWord);
-	// Paint boxes with corresponding color using css classes - add animation
-	// If guess is correct play victory animation
-	// if guess word is not correct move to next row of boxes - update count to start at 5 and call populateboxes
-	//
+}
+
+function clearWord() {
+	guessWord = "";
 }
 
 // Keypress listeners
 window.addEventListener("keydown", (event) => {
+	checkLength();
 	// uses the isLetter function from above
 	if (isLetter(event.key)) {
 		let validLetter = event.key;
@@ -92,13 +105,15 @@ window.addEventListener("keydown", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
-	if (event.key === "Enter" && count === 5) {
+	if (event.key === "Enter") {
 		checkResult(guessWord);
+		clearBoxStyle();
 	}
 });
 
 window.addEventListener("keydown", (event) => {
 	if (event.key === "Backspace" && count > 0) {
 		depopulateBoxes();
+		clearBoxStyle();
 	}
 });
