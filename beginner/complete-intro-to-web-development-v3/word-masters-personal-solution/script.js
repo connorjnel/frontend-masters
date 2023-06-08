@@ -9,6 +9,8 @@ let count = 0;
 let gameResult;
 let counter = 0;
 
+const ANSWER_LENGTH = 5;
+
 async function getWord(wordOfTheDayURL) {
 	let request = await fetch(wordOfTheDayURL);
 	let response = await request.json();
@@ -72,7 +74,7 @@ function compareLetters(guessWord, answerWord) {
 			boxes[index].classList.add("red");
 		}
 	}
-	counter = count - 5;
+	counter = count - ANSWER_LENGTH;
 	clearWord();
 }
 
@@ -83,7 +85,7 @@ function clearBoxStyle() {
 }
 
 function checkLength() {
-	if (guessWord.length == 4) {
+	if (guessWord.length == ANSWER_LENGTH) {
 		checkResult(guessWord);
 	}
 }
