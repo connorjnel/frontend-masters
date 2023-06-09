@@ -118,3 +118,5 @@ window.addEventListener("keydown", (event) => {
 		clearBoxStyle();
 	}
 });
+
+// Done, good course
