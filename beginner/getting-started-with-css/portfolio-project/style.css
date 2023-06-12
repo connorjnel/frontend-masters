@@ -1,0 +1,35 @@
+/* Grabbed from Google Fonts, Font Pairings helped with selection */
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Source+Sans+3&display=swap");
+
+/* Grabbed from Adobe Color, kinda like Coolors but can copy as CSS */
+:root {
+	/* Colors */
+	--color-1: #363432;
+	--color-2: #196774;
+	--color-3: #90a19d;
+	--color-4: #f0941f;
+	--color-5: #ef6024;
+
+	/* Fonts */
+	--font-heading: "Oswald", sans-serif;
+	--font-body: "Source Sans 3", sans-serif;
+}
+
+body {
+	background: var(--color-1);
+	color: #fff;
+}
+
+h1 {
+	font-family: var(--font-heading);
+}
+
+p {
+	font-family: var(--font-body);
+}
+
+.container {
+	padding: 4rem 1rem 10rem 1rem;
+	max-width: 80%;
+	margin: 0 auto;
+}
