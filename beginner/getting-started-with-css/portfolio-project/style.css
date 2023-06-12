@@ -4,32 +4,145 @@
 /* Grabbed from Adobe Color, kinda like Coolors but can copy as CSS */
 :root {
 	/* Colors */
-	--color-1: #363432;
-	--color-2: #196774;
-	--color-3: #90a19d;
-	--color-4: #f0941f;
-	--color-5: #ef6024;
+	--dark-gray: #363432;
+	--light-gray: #5a5a5a;
+	--dark-blue: #196774;
+	--light-blue: #90a19d;
+	--yellow: #f0941f;
+	--orange: #ef6024;
+	--white: #ffffff;
 
 	/* Fonts */
 	--font-heading: "Oswald", sans-serif;
 	--font-body: "Source Sans 3", sans-serif;
+	--font-size: 1.3rem;
 }
 
 body {
-	background: var(--color-1);
-	color: #fff;
+	background: var(--dark-gray);
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-body);
+	color: var(--white);
+	font-size: var(--font-size);
 }
 
-h1 {
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+h1,
+h2,
+h3 {
 	font-family: var(--font-heading);
+	margin: 0;
+}
+
+a {
+	color: var(--dark-blue);
+}
+
+a:hover {
+	color: var(--light-blue);
+	text-decoration: none;
 }
 
 p {
 	font-family: var(--font-body);
+	letter-spacing: 1.5px;
 }
 
-.container {
+/* Intro Section */
+#intro {
 	padding: 4rem 1rem 10rem 1rem;
-	max-width: 80%;
+	max-width: 1200px;
 	margin: 0 auto;
+}
+
+#intro p {
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+#intro .name {
+	font-family: var(--font-body);
+	font-size: 1rem;
+}
+
+#intro .name span {
+	font-family: var(--font-heading);
+	font-size: 4rem;
+	color: var(--orange);
+	display: block;
+	font-weight: 300;
+}
+
+#intro h2 {
+	font-size: 4rem;
+}
+
+/* Gradient Divider */
+.gradient-orange {
+	background: linear-gradient(to right, var(--orange), var(--light-blue));
+	height: 6px;
+}
+
+.gradient-white {
+	background: linear-gradient(to right, var(--white), var(--light-gray));
+	height: 6px;
+}
+
+/* Projects Section */
+.container-two {
+	background: var(--dark-blue);
+}
+
+#projects {
+	padding: 4rem 1rem 10rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Contact Section */
+.container-three {
+	background: var(--yellow);
+}
+
+#contact {
+	padding: 4rem 1rem 10rem 1rem;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+#contact h3 {
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+#contact p {
+	text-align: center;
+}
+
+#contact button {
+	cursor: pointer;
+	padding: 15px 60px;
+	border: none;
+	border-radius: 5px;
+	color: var(--white);
+	background-color: var(--orange);
+	font-size: var(--font-size);
+	display: block;
+	margin: 40px auto 0 auto;
+}
+
+#contact button:hover {
+	background-color: var(--light-gray);
+	transition: background-color 1s ease;
+}
+
+#contact a {
+	text-decoration: none;
 }
