@@ -146,3 +146,139 @@ p {
 #contact a {
 	text-decoration: none;
 }
+
+/* Main Menu */
+nav {
+	padding: 4rem 1rem 10rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+nav .logo-container {
+	width: 50%;
+	display: flex;
+}
+
+.logo-text {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.logo-text {
+	display: flex;
+	padding-left: 20px;
+	font-size: 2rem;
+	margin: 0;
+	color: var(--white);
+	font-family: var(--font-heading);
+	letter-spacing: 1.5px;
+}
+
+a.logo-text {
+	text-decoration: none;
+}
+
+.logo-text:hover {
+	color: var(--orange);
+}
+
+.logo-icon {
+	width: 50px;
+	height: 50px;
+}
+
+nav .navigation {
+	display: flex;
+	width: 50%;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	height: 50px;
+}
+
+.nav-item a {
+	color: var(--white);
+	text-decoration: none;
+	font-family: var(--font-heading);
+	letter-spacing: 1.5px;
+}
+
+.nav-item a:hover {
+	color: var(--orange);
+}
+
+.nav-item.icon i {
+	color: var(--yellow);
+	font-size: 1.7rem;
+}
+
+.nav-item.icon i:hover {
+	color: var(--orange);
+}
+
+button.resume {
+	cursor: pointer;
+	padding: 5px 40px;
+	border: none;
+	border-radius: 5px;
+	color: var(--white);
+	background-color: var(--orange);
+	font-size: 1.2rem;
+	min-height: 50px;
+}
+
+button.resume:hover {
+	background-color: var(--yellow);
+	transition: background-color 1s ease;
+}
+
+button.resume a {
+	text-decoration: none;
+}
+
+/* Mobile Logo */
+
+@media screen and (max-width: 875px) {
+	nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding: 1.5rem 1rem;
+	}
+	.logo-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	nav .navigation {
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+	button.resume {
+		padding: 0px 20px;
+		min-height: 30px;
+	}
+	.nav-item.link {
+		padding: 0 15px;
+		margin-bottom: 10px;
+	}
+	.logo-text {
+		justify-content: space-between;
+	}
+	nav .logo-container {
+		width: 100%;
+		margin-bottom: 20px;
+		justify-content: flex-start;
+	}
+}
