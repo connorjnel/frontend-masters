@@ -306,6 +306,10 @@ button.resume a {
 	margin: 0;
 }
 
+#footer h3 {
+	font-size: 2.5rem;
+}
+
 .footer-buttons {
 	list-style-type: none;
 	margin: 0;
@@ -324,4 +328,9 @@ button.resume a {
 
 .footer-icon a:hover {
 	color: var(--white);
+}
+
+/* Projects */
+#projects h3 {
+	font-size: 2.5rem;
 }
