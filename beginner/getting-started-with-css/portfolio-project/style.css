@@ -15,6 +15,7 @@
 	/* Fonts */
 	--font-heading: "Oswald", sans-serif;
 	--font-body: "Source Sans 3", sans-serif;
+	--font-mono: monospace;
 	--font-size: 1.3rem;
 }
 
@@ -95,24 +96,13 @@ p {
 	height: 6px;
 }
 
-/* Projects Section */
-.container-two {
-	background: var(--dark-blue);
-}
-
-#projects {
-	padding: 4rem 1rem 10rem 1rem;
-	max-width: 1200px;
-	margin: 0 auto;
-}
-
 /* Contact Section */
 .container-three {
 	background: var(--yellow);
 }
 
 #contact {
-	padding: 4rem 1rem 10rem 1rem;
+	padding: 4rem 1rem;
 	max-width: 400px;
 	margin: 0 auto;
 }
@@ -149,7 +139,7 @@ p {
 
 /* Main Menu */
 nav {
-	padding: 4rem 1rem 10rem 1rem;
+	padding: 4rem 1rem;
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;
@@ -296,7 +286,7 @@ button.resume a {
 }
 
 #footer {
-	padding: 4rem 1rem 5rem 1rem;
+	padding: 4rem 1rem;
 	max-width: 1200px;
 	margin: 0 auto;
 	text-align: center;
@@ -330,7 +320,33 @@ button.resume a {
 	color: var(--white);
 }
 
-/* Projects */
-#projects h3 {
+/* Projects Section */
+.container-two {
+	background: var(--dark-blue);
+}
+
+#projects {
+	padding: 4rem 1rem;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h3 {
 	font-size: 2.5rem;
+}
+
+#projects h3:first-of-type {
+	margin-bottom: calc(2.5rem * 1.5);
+}
+
+.project-class {
+	margin: 0;
+	font-size: 1rem;
+	font-family: var(--font-mono);
+	letter-spacing: 1px;
+}
+
+.project-title {
+	font-size: 2rem;
+	color: var(--orange);
 }
