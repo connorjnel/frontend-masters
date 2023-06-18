@@ -51,6 +51,10 @@ a:hover {
 	text-decoration: none;
 }
 
+img {
+	width: 100%;
+}
+
 p {
 	font-family: var(--font-body);
 	letter-spacing: 1.5px;
@@ -120,7 +124,7 @@ p {
 	cursor: pointer;
 	padding: 15px 60px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	color: var(--white);
 	background-color: var(--orange);
 	font-size: var(--font-size);
@@ -222,7 +226,7 @@ button.resume {
 	cursor: pointer;
 	padding: 5px 40px;
 	border: none;
-	border-radius: 5px;
+	border-radius: 10px;
 	color: var(--white);
 	background-color: var(--orange);
 	font-size: 1.2rem;
@@ -335,7 +339,7 @@ h3 {
 	font-size: 2.5rem;
 }
 
-#projects h3:first-of-type {
+.project-heading {
 	margin-bottom: calc(2.5rem * 1.5);
 }
 
@@ -346,7 +350,62 @@ h3 {
 	letter-spacing: 1px;
 }
 
-.project-title {
+h3.project-title {
 	font-size: 2rem;
 	color: var(--orange);
+}
+
+.project-text {
+	background: var(--dark-gray);
+	border-radius: 10px;
+	padding: 1rem;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+.project-text a {
+	color: var(--orange);
+}
+
+.project-stack {
+	margin: 0;
+	font-size: 1rem;
+	font-family: var(--font-mono);
+	letter-spacing: 1px;
+}
+
+.stack {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	gap: 1rem;
+	font-size: 1rem;
+	font-family: var(--font-mono);
+	letter-spacing: 1px;
+}
+
+.project-image {
+	margin: 2rem 0 4rem 0;
+	padding: 1rem;
+	border-top: 1px solid var(--orange);
+	border-left: 1px solid var(--orange);
+	border-radius: 15px;
+}
+
+@media screen and (min-width: 550px) {
+	article.standard {
+		display: grid;
+		grid
+	}
+
+	article.standard img {
+		grid-area: image;
+	}
+
+	article.standard .text {
+		grid-area: text;
+	}
 }
