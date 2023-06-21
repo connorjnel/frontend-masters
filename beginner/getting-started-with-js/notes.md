@@ -28,7 +28,11 @@ Object -> {key: value}
 => -> Greater than or equal to
 <= -> Less than or equal to
 
-&& ->	and
-|| ->	or
-! ->	not
+&& -> and
+|| -> or
+! -> not
 ```
+
+## Types
+
+console.log(typeof null)
