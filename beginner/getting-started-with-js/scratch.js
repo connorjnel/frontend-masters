@@ -1,3 +1,5 @@
 console.log(3 + 4);
-console.log("Jovan" + "Nel");
-console.log(typeof null);
+console.log("Connor" + "Nel");
+
+console.log(typeof 5);
+console.log(typeof "5");
