@@ -35,4 +35,4 @@ Object -> {key: value}
 
 ## Types
 
-console.log(typeof null)
+typeof - super useful
