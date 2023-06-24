@@ -1,5 +1,5 @@
-console.log(3 + 4);
-console.log("Connor" + "Nel");
+let myNumber = 5;
 
-console.log(typeof 5);
-console.log(typeof "5");
+for (let i = 0; i <= myNumber; i++) {
+	console.log(i);
+}
