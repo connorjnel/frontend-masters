@@ -26,3 +26,5 @@ addFavoriteBook("You Don't Know JS");
 // TODO: print out favorite books
 
 printFavoriteBooks();
+
+// Correct answers, good job :D
